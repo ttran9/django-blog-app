@@ -10,3 +10,6 @@
 
 # sqlite db #
 db.sqlite3
+
+# PyCharm #
+.idea

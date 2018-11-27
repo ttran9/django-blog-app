@@ -1,5 +1,5 @@
 # Django Blog Tutorial #
 
 
-- This video tutorial covered the basics of creating, updating, and deleting posts.
+- This video tutorial covered the basics of pagination.
     -

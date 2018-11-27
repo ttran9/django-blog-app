@@ -123,3 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'blog-home' # the url to go to after logging in.
+LOGIN_URL = 'login' # name of the login route in the urls.py file.

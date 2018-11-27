@@ -122,6 +122,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # the directory where the media files will be saved.
+MEDIA_URL = '/media/'
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home' # the url to go to after logging in.

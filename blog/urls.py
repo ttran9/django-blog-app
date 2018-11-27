@@ -1,10 +1,25 @@
 from django.urls import path
-from django.contrib import admin
 from . import views
+from .views import (
+    PostListView,
+    PostDetailView,
+    PostCreateView,
+    PostUpdateView,
+    PostDeleteView
+)
+
 
 urlpatterns = [
     # name is blog-home because we want to do a reverse look-up and having a generic name may cause a collision with "home" in another application.
     # path('', admin.site.urls, name='blog-home-2'),
-    path('', views.home, name='blog-home'),
-    path('about', views.about, name='blog-about')
+    # path('', views.home, name='blog-home'),
+    path('', PostListView.as_view(), name='blog-home'),
+    path('about/', views.about, name='blog-about'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+    path('post/new/', PostCreateView.as_view(), name='post-create'),
+    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
 ]
+
+
+

@@ -13,3 +13,6 @@ db.sqlite3
 
 # PyCharm #
 .idea
+
+# Environment Variables #
+.env
